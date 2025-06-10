@@ -6,13 +6,13 @@ Use the timeline chart to see the actions to be taken
 
 timeline
     title Boostrap steps
-    section Infra component
-        Kafka
-             : Strimzi Kafka operator (Helmfile)
-             : Strimzi Kafka instance (Kustomization)
-        Clickhouse
-             : Clickhouse operator (Helmfile)
-             : Clickhouse instance (Kustomization)
+    section Infra components
+        1. Kafka
+             : Install Strimzi Kafka operator (Helmfile)
+             : Install Strimzi Kafka instance (Kustomization)
+        2. Clickhouse
+             : Install Clickhouse operator (Helmfile)
+             : Install Clickhouse instance (Kustomization)
     section .NET Core
         2016 - 2017 
              : .NET Core 1.0
