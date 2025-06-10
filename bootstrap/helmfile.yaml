@@ -9,6 +9,8 @@ helmDefaults:
 repositories:
   - name: clickhouse
     url: https://docs.altinity.com/clickhouse-operator/
+  - name: strimzi
+    url: https://docs.altinity.com/clickhouse-operator/
 
 releases:
   - name: clickhouse-operator
@@ -16,5 +18,13 @@ releases:
     atomic: true
     chart: clickhouse/altinity-clickhouse-operator
     version: 0.24.5
-    values: ['{{ requiredEnv "ROOT_DIR" }}/k8s/clickhouse-operator/values.yaml']
+    values: ['k8s/clickhouse-operator/values.yaml']
+    needs: []
+
+  - name: strimzi-kafka-operator
+    namespace: strimzi
+    atomic: true
+    chart: oci://quay.io/strimzi-helm/strimzi-kafka-operator
+    version: 0.19.0
+    values: ['k8s/strimzi-kafka-operator/values.yaml']
     needs: []
