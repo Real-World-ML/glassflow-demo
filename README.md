@@ -1,10 +1,11 @@
 ---
 
+Use the timeline chart to see the actions to be taken 
 
 ```mermaid
 
 timeline
-    title Major .NET Releases
+    title Boostrap steps
     section .NET Framework
         2000 - 2005 
              : .NET Framework 1.0
@@ -28,6 +29,9 @@ timeline
              : .NET Framework 4.5.2
              : .NET Framework 4.6
              : .NET Framework 4.6.1
+        Clickhouse
+             : Clickhouse operator (Helmfile)
+             : Clickhouse instance (Kustomization)
     section .NET Core
         2016 - 2017 
              : .NET Core 1.0
