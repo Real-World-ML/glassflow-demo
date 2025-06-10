@@ -1,0 +1,6 @@
+#
+fullnameOverride: "clickhouse-operator"
+
+#
+metrics:
+  enabled: false

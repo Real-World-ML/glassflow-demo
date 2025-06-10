@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json.schemastore.org/helmfile
+---
+
+helmDefaults:
+  cleanupOnFail: true
+  wait: true
+  waitForJobs: true
+
+repositories:
+  - name: clickhouse
+    url: https://docs.altinity.com/clickhouse-operator/
+
+releases:
+  - name: clickhouse-operator
+    namespace: clickhouse
+    atomic: true
+    chart: clickhouse/altinity-clickhouse-operator
+    version: 0.24.5
+    values: ['{{ requiredEnv "ROOT_DIR" }}/k8s/clickhouse-operator/values.yaml']
+    needs: []
