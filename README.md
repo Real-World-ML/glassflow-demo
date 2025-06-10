@@ -6,29 +6,10 @@ Use the timeline chart to see the actions to be taken
 
 timeline
     title Boostrap steps
-    section .NET Framework
-        2000 - 2005 
-             : .NET Framework 1.0
-             : .NET Framework 1.0 SP1
-             : .NET Framework 1.0 SP2
-             : .NET Framework 1.1
-             : .NET Framework 1.0 SP3
-             : .NET Framework 2.0
-        2006 - 2009 
-             : .NET Framework 3.0
-             : .NET Framework 3.5 
-             : .NET Framework 2.0 SP 1 
-             : .NET Framework 3.0 SP 1 
-             : .NET Framework 2.0 SP 2 
-             : .NET Framework 3.0 SP 2 
-             : .NET Framework 3.5 SP 1
-        2010 - 2015 
-             : .NET Framework 4.0
-             : .NET Framework 4.5
-             : .NET Framework 4.5.1
-             : .NET Framework 4.5.2
-             : .NET Framework 4.6
-             : .NET Framework 4.6.1
+    section Infra component
+        Kafka
+             : Strimzi Kafka operator (Helmfile)
+             : Strimzi Kafka instance (Kustomization)
         Clickhouse
              : Clickhouse operator (Helmfile)
              : Clickhouse instance (Kustomization)
