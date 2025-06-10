@@ -8,8 +8,8 @@ timeline
     title Boostrap steps
     section Infra components
         1. Kafka
-             : Install Strimzi Kafka operator (Helmfile)
-             : Install Strimzi Kafka instance (Kustomization)
+             : 1.1 Install Strimzi Kafka operator (Helmfile)
+             : 2.2 Install Strimzi Kafka instance (Kustomization)
         2. Clickhouse
              : Install Clickhouse operator (Helmfile)
              : Install Clickhouse instance (Kustomization)
