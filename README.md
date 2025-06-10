@@ -3,6 +3,7 @@
 Use the timeline chart to see the actions to be taken 
 
 ```mermaid
+
 timeline
     title Boostrap steps
     section Infra components
@@ -22,13 +23,6 @@ section Glassflow
              : .NET Core 2.0
              : .NET Framework 4.7
              : .NET Framework 4.7.1
-        2018 - 2019 
-             : .NET Core 2.1
-             : .NET Core 2.2
-             : .NET Framework 4.7.2             
-             : .NET Core 3.0
-             : .NET Core 3.1
-             : .NET Framework 4.8
     section K8S Jobs
         2020 : .NET 5
         2021 : .NET 6
@@ -36,14 +30,28 @@ section Glassflow
              : .NET Framework 4.8.3
 ```
 
-## 1. Clickhouse
+---
+
+## 1. Kafka
+    
+### 1.1 Strimzi Kafka operator
+  
+### 1.2  Strimzi Kafka instance
+  
+---
 
 
-### 1.1 clickhouse-operator
-
-
+## 2. Clickhouse
+  
+### 2.1 clickhouse-operator
+    
 https://github.com/Altinity/clickhouse-operator/blob/master/docs/operator_installation_details.md
+  
+### 2.2  clickhouse-instance
 
+---
 
+## 3. NATS
+    
+### 3.1 NATS installation
 
-### 2.1  clickhouse-instance
