@@ -1,0 +1,6 @@
+#
+# https://github.com/nats-io/k8s/blob/main/helm/charts/nats/values.yaml
+# https://github.com/nats-io/nats-box
+#
+
+# Using default values

@@ -3,7 +3,6 @@
 Use the timeline chart to see the actions to be taken 
 
 ```mermaid
-
 timeline
     title Boostrap steps
     section Infra components
@@ -11,9 +10,11 @@ timeline
              : 1.1 Install Strimzi Kafka operator (Helmfile)
              : 2.2 Install Strimzi Kafka instance (Kustomization)
         2. Clickhouse
-             : Install Clickhouse operator (Helmfile)
-             : Install Clickhouse instance (Kustomization)
-    section .NET Core
+             : 2.1 Install Clickhouse operator (Helmfile)
+             : 2.2 Install Clickhouse instance (Kustomization)
+        3. NATS
+             : 3.1 Install NATS (Helmfile)
+section Glassflow
         2016 - 2017 
              : .NET Core 1.0
              : .NET Core 1.1
@@ -28,11 +29,11 @@ timeline
              : .NET Core 3.0
              : .NET Core 3.1
              : .NET Framework 4.8
-    section Modern .NET
+    section K8S Jobs
         2020 : .NET 5
         2021 : .NET 6
         2022 : .NET 7
-             : .NET Framework 4.8.1
+             : .NET Framework 4.8.3
 ```
 
 ## 1. Clickhouse

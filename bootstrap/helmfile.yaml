@@ -9,8 +9,8 @@ helmDefaults:
 repositories:
   - name: clickhouse
     url: https://docs.altinity.com/clickhouse-operator/
-  - name: strimzi
-    url: https://docs.altinity.com/clickhouse-operator/
+  - name: nats
+    urlL: https://nats-io.github.io/k8s/helm/charts/
 
 releases:
   - name: clickhouse-operator
@@ -27,4 +27,12 @@ releases:
     chart: oci://quay.io/strimzi-helm/strimzi-kafka-operator
     version: 0.19.0
     values: ['k8s/strimzi-kafka-operator/values.yaml']
+    needs: []
+
+  - name: nats
+    namespace: nats
+    atomic: true
+    chart: nats/nats
+    version: 0.17.2
+    values: ['k8s/nats/values.yaml']
     needs: []
