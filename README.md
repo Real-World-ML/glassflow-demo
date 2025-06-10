@@ -6,6 +6,7 @@ Use the timeline chart to see the actions to be taken
 
 timeline
     title Boostrap steps
+
     section Infra components
         1. Kafka
              : 1.1 Install Strimzi Kafka operator (Helmfile)
@@ -15,14 +16,16 @@ timeline
              : 2.2 Install Clickhouse instance (Kustomization)
         3. NATS
              : 3.1 Install NATS (Helmfile)
-section Glassflow
-        2016 - 2017 
+
+     section Glassflow
+        2016 - 2017
              : .NET Core 1.0
              : .NET Core 1.1
              : .NET Framework 4.6.2
              : .NET Core 2.0
              : .NET Framework 4.7
              : .NET Framework 4.7.1
+    
     section K8S Jobs
         2020 : .NET 5
         2021 : .NET 6
@@ -54,4 +57,3 @@ https://github.com/Altinity/clickhouse-operator/blob/master/docs/operator_instal
 ## 3. NATS
     
 ### 3.1 NATS installation
-
