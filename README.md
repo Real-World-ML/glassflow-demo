@@ -73,12 +73,17 @@ bin/kafka-console-consumer.sh --bootstrap-server kafka-9d65-kafka-brokers.strimz
 ## 2. Clickhouse
   
 ### 2.1 clickhouse-operator
-    
-https://github.com/Altinity/clickhouse-operator/blob/master/docs/operator_installation_details.md
+
+[manifest](k8s/clickhouse-operator/values.yaml)
+
   
 ### 2.2  clickhouse-instance
 
+Clickhouse instance [manifest](k8s/clickhouse/chi-4782.yaml) and Clickhouse Keeper [manifest](k8s/clickhouse/chk-b593.yaml).
+
 ### 2.3 Misc
+
+Clickhouse service address: 
 
 ```sh
 clickhouse-chi-4782.clickhouse.svc.cluster.local
@@ -90,6 +95,7 @@ clickhouse-chi-4782.clickhouse.svc.cluster.local
     
 ### 3.1 NATS installation
 
+NATS needs to have enabled [Jetstream](https://docs.nats.io/nats-concepts/jetstream) persistence. See Helm chart [values](k8s/nats/values.yaml).
 
 ---
 
