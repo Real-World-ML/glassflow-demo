@@ -3,7 +3,6 @@
 Use the timeline chart to see the actions to be taken 
 
 ```mermaid
-
 timeline
     title Boostrap steps
 
@@ -18,19 +17,20 @@ timeline
              : 3.1 Install NATS (Helmfile)
 
      section Glassflow
-        2016 - 2017
-             : .NET Core 1.0
-             : .NET Core 1.1
-             : .NET Framework 4.6.2
-             : .NET Core 2.0
-             : .NET Framework 4.7
-             : .NET Framework 4.7.1
-    
-    section K8S Jobs
-        2020 : .NET 5
-        2021 : .NET 6
-        2022 : .NET 7
-             : .NET Framework 4.8.3
+        4. Glassflow backend
+             : 4.1 Deployment Glassflow backend
+             : 4.2 Deployment Glassflow service
+        5. Glassflow frontend
+             : 5.1 Deployment Glassflow frontend
+             : 5.2 Deployment Glassflow service
+
+    section Demos
+        6. Deduplication demo
+          : 6.1 Glassflow pipeline JSON via backend API
+          : 6.2 Glassflow uses NATS Jetstream
+          : 6.3 Source: Glassflow checks & hooks to Kafka topic
+          : 6.4 Sink Glassflow checks & hooks to Clickhouse table
+        7. Join demo
 ```
 
 ---
@@ -85,5 +85,5 @@ clickhouse-chi-4782.clickhouse.svc.cluster.local
 ---
 
 ## Tools
-- [Helmfile](https://github.com/helmfile/helmfile)
 
+- [Helmfile](https://github.com/helmfile/helmfile)
