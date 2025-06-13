@@ -70,7 +70,6 @@ spec:
         provisioner: StatefulSet
         reclaimPolicy: Retain
         spec:
-          storageClassName: rook-ceph-block
           accessModes:
             - ReadWriteOnce
           resources:
