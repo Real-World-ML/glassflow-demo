@@ -8,7 +8,9 @@
 - [ ] Clickhouse native UI
 - [ ] Join demo
 - [ ] More robust Clickhouse record count
-- [ ] Scaling up Backend to 3 instances
+- [ ] Scaling up Backend to 3+ instances
+- [ ] Scaling up Clickhouse
+- [ ] Scaling up Kafka
 
 ### Boostrap
 
