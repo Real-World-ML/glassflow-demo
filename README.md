@@ -11,6 +11,7 @@
 - [ ] Scaling up Backend to 3+ instances
 - [ ] Scaling up Clickhouse
 - [ ] Scaling up Kafka
+- [ ] Scaling up NATS
 
 ### Boostrap
 
