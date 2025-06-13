@@ -1,0 +1,5 @@
+.vscode
+kubeconfig
+*.ignore.yaml
+*.ignore.md
+*.secret.yaml

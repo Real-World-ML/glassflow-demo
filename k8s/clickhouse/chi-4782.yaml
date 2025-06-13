@@ -10,20 +10,16 @@ metadata:
 spec:
   #
   configuration:
-    # 
-    # WIP
-    #
     users:
-      # grafana/password:
-      #   valueFrom:
-      #     secretKeyRef:
-      #       name: clickhouse-grafana
-      #       key: grafana
-      # grafana/networks/ip: "::/0"
-      # grafana/networks/host_regexp: "disabled"
-      # default/access_management: 1
-      # default/networks/ip: "::/0"
-
+      glassflow/password:
+        valueFrom:
+          secretKeyRef:
+            name: clickhouse-glassflow
+            key: glassflow
+      glassflow/networks/ip: "::/0"
+      glassflow/networks/host_regexp: "disabled"
+      default/access_management: 1
+      default/networks/ip: "::/0"
     #
     zookeeper:
       nodes:

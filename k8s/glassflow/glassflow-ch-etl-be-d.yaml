@@ -1,0 +1,103 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: glassflow-ch-etl-be
+  labels:
+    app.kubernetes.io/controller: glassflow-be
+    app.kubernetes.io/instance: glassflow-ch-etl-be
+    app.kubernetes.io/name: glassflow-ch-etl-be
+  annotations:
+    reloader.stakater.com/auto: "true"
+  namespace: glassflow
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1
+  
+  strategy:
+    type: Recreate
+  
+  selector:
+    matchLabels:
+      app.kubernetes.io/controller: glassflow-be
+      app.kubernetes.io/name: glassflow-ch-etl-be
+      app.kubernetes.io/instance: glassflow-ch-etl-be
+  
+  template:
+    metadata:
+      labels: 
+        app.kubernetes.io/controller: glassflow-be
+        app.kubernetes.io/instance: glassflow-ch-etl-be
+        app.kubernetes.io/name: glassflow-ch-etl-be
+    
+    spec: 
+      enableServiceLinks: false
+      serviceAccountName: default
+      automountServiceAccountToken: true
+
+      # securityContext: 
+      #   fsGroup: 1000
+      #   fsGroupChangePolicy: OnRootMismatch
+      #   runAsGroup: 1000
+      #   runAsNonRoot: true
+      #   runAsUser: 1000
+      #   seccompProfile:
+      #     type: RuntimeDefault
+      #   supplementalGroups:
+      #   - 10000
+
+      hostIPC: false
+      hostNetwork: false
+      hostPID: false
+
+      dnsPolicy: ClusterFirst
+
+      containers:
+        - env:
+          - name: GLASSFLOW_LOG_FILE_PATH
+            value: /tmp
+          - name: GLASSFLOW_NATS_SERVER
+            value: nats.nats.svc.cluster.local:4222
+
+          image: glassflow/clickhouse-etl-be:stable
+
+          # livenessProbe:
+          #   failureThreshold: 6
+          #   httpGet:
+          #     path: /
+          #     port: 8080
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 30
+          #   timeoutSeconds: 10
+          
+          name: glassflow-ch-etl-be
+          
+          # readinessProbe:
+          #   failureThreshold: 6
+          #   httpGet:
+          #     path: /
+          #     port: 8080
+          #   initialDelaySeconds: 30
+          #   periodSeconds: 30
+          #   timeoutSeconds: 10
+          
+          resources:
+            limits:
+              memory: 8Gi
+            requests:
+              cpu: 1000m
+          
+          # securityContext:
+          #   allowPrivilegeEscalation: false
+          #   capabilities:
+          #     drop:
+          #     - ALL
+          #   readOnlyRootFilesystem: true
+
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp
+
+      volumes:
+        - emptyDir: {}
+          name: tmp

@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: glassflow-ch-etl-be
+  labels:
+    app.kubernetes.io/instance: glassflow-ch-etl-be
+    app.kubernetes.io/name: glassflow-ch-etl-be
+    app.kubernetes.io/service: glassflow-ch-etl-be
+  namespace: glassflow
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/controller: glassflow-be
+    app.kubernetes.io/instance: glassflow-ch-etl-be
+    app.kubernetes.io/name: glassflow-ch-etl-be
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
