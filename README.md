@@ -6,7 +6,9 @@
 - [ ] Container Logging via Quickwit/Fluentbit
 - [ ] Grafana for Prometheus/Clickhouse metrics
 - [ ] Clickhouse native UI
-
+- [ ] Join demo
+- [ ] More robust Clickhouse record count
+- [ ] Scaling up Backend to 3 instances
 
 ### Boostrap
 
