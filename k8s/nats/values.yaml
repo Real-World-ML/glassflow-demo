@@ -3,4 +3,18 @@
 # https://github.com/nats-io/nats-box
 #
 
-# Using default values
+config:
+  cluster:
+    enabled: true
+    replicas: 3
+
+  jetstream:
+    enabled: true
+
+    fileStore:
+      enabled: true
+      dir: /data
+
+      pvc:
+        enabled: true
+        size: 10Gi

@@ -33,6 +33,6 @@ releases:
     namespace: nats
     atomic: true
     chart: nats/nats
-    version: 0.17.2
+    version: 1.3.7
     values: ['k8s/nats/values.yaml']
     needs: []
