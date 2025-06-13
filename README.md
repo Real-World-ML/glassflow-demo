@@ -1,7 +1,7 @@
 ### Roadmap
 
-- [ ] Backend complete manifests (deployment, service) addressing resource management / to / security
-- [ ] Frontend complete manifests (ingress, deployment, service) addressing resource management / to / security
+- [ ] Glassflow backend complete manifests (deployment, service) addressing resource management / to / security
+- [ ] Glassflow frontend complete manifests (ingress, deployment, service) addressing resource management / to / security
 - [ ] Monitoring and observability for Backend via Prometheus
 - [ ] Container Logging via Quickwit/Fluentbit
 - [ ] Grafana for Prometheus/Clickhouse metrics
