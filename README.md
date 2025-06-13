@@ -1,9 +1,9 @@
 ### Roadmap
 
 - [ ] Backend complete manifests (deployment, service)
-      Addressing: From resource management / to / security
+- - Addressing: From resource management / to / security
 - [ ] Frontend complete manifests (ingress, deployment, service)
-      Addressing: From resource management / to / security
+- - Addressing: From resource management / to / security
 - [ ] Monitoring and observability for Backend via Prometheus
 - [ ] Container Logging via Quickwit/Fluentbit
 - [ ] Grafana for Prometheus/Clickhouse metrics
