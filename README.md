@@ -31,7 +31,9 @@ timeline
         6. Deduplication demo
           : 6.1 Glassflow pipeline JSON via backend API
           : 6.2 Glassflow uses NATS Jetstream
-          : 6.3 Source: Glassflow checks & hooks to Kafka topic
+          : 6.3 Source
+               : Glassflow checks & hooks to Kafka topic
+               : Messages in topic are processed and deduplicated
           : 6.4 Sink: Glassflow checks & hooks to Clickhouse table
 
 ```
